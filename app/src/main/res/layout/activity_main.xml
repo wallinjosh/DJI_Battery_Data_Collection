@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    tools:context="utm.aeroe.edu.dji_battery_data_collection.MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+        android:id="@+id/selectDistTime"
+
+        <RadioGroup
+            android:layout_width="368dp"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:text="Use Distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/selectDistance"
+                android:layout_weight="1" />
+
+            <RadioButton
+                android:text="Use Time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/selectTime"
+                android:layout_weight="1" />
+
+            <RadioButton
+                android:text="Sports Mode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/sportsMode"
+                android:layout_weight="1" />
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/laps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Lap Count"
+            android:layout_weight="1"
+            android:inputType="number" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/distance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Distance"
+            android:layout_weight="1"
+            android:inputType="numberSigned|numberDecimal" />
+        <EditText
+            android:id="@+id/duration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Duration"
+            android:layout_weight="1"
+            android:inputType="numberSigned|numberDecimal" />
+        <EditText
+            android:id="@+id/heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Heading"
+            android:layout_weight="1"
+            android:inputType="numberSigned|numberDecimal" />/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/velocity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Velocity"
+            android:layout_weight="0.9"
+            android:inputType="numberSigned|numberDecimal" />/>
+        <EditText
+            android:id="@+id/altitude"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Altitude"
+            android:layout_weight="0.9"
+            android:inputType="numberSigned|numberDecimal" />/>
+        <Button
+            android:id="@+id/start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Start"
+            android:layout_weight="1" />
+        <Button
+            android:id="@+id/stop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Stop"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <fragment
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        class="com.google.android.gms.maps.SupportMapFragment" />
+
+    <!--<TextView-->
+        <!--android:id="@+id/displayLocation"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content" />-->
+
+</LinearLayout>
